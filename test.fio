@@ -1,0 +1,15 @@
+[global]
+ioengine=libaio
+direct=1
+group_reporting
+filename=/dev/sdb
+
+[random]
+description=random write iops 95%
+rw=randwrite
+iodepth=32
+bs=4K
+loops=10
+size=95%
+runtime=3600
+write_iops_log=/home/guzheng/fio-randw-iops-rate-95
